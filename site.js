@@ -15,3 +15,11 @@ if (toggle && nav) {
 }
 const year = document.querySelector("[data-year]");
 if (year) year.textContent = String(new Date().getFullYear());
+
+// Fade the header background in once the page is scrolled.
+const header = document.querySelector(".site-header");
+if (header) {
+  const update = () => header.classList.toggle("scrolled", window.scrollY > 10);
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+}
