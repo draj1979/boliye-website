@@ -162,8 +162,7 @@ section.soft .card { box-shadow: none; }
 
 /* team */
 .person { display: flex; flex-direction: column; gap: 12px; }
-.avatar { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; font-weight: 800; font-size: 1.4rem; color: #fff; background: linear-gradient(135deg, #5a6df0, #2b3a9a); }
-.avatar.alt { background: linear-gradient(135deg, #19c3b1, #0b6b60); }
+.person-photo { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; }
 .role { font-size: 0.9rem; font-weight: 600; color: var(--primary); margin: -6px 0 0; }
 .person a.link { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.95rem; text-decoration: none; margin-top: auto; }
 .person a.link:hover { text-decoration: underline; }
@@ -208,6 +207,7 @@ section.soft .card { box-shadow: none; }
   .hero-grid { grid-template-columns: 1fr; padding: 73px 0 81px; gap: 36px; }
   .cols-4 { grid-template-columns: repeat(2, 1fr); }
   .cols-3 { grid-template-columns: 1fr; }
+  .people-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .foot-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 720px) {
@@ -222,6 +222,7 @@ section.soft .card { box-shadow: none; }
   .nav.open { display: flex; }
   .nav a:not(.btn) { padding: 12px 4px; font-size: 1.02rem; }
   .cols-2, .cols-4 { grid-template-columns: 1fr; }
+  .people-grid { grid-template-columns: 1fr; }
   .foot-grid { grid-template-columns: 1fr; }
   .bubble { max-width: 94%; }
 }
